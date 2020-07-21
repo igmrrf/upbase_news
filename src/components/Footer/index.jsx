@@ -11,7 +11,7 @@ function Copyright() {
     <Typography variant="body2" color="textSecondary" align="center">
       {"Copyright © "}
       <Link color="inherit" href="https://material-ui.com/">
-        Your Website
+        Upbase Limited
       </Link>{" "}
       {new Date().getFullYear()}
       {"."}
@@ -48,6 +48,13 @@ const footers = [
   }
 ];
 const useStyles = makeStyles(theme => ({
+  "@global": {
+    ul: {
+      margin: 0,
+      padding: 0,
+      listStyle: "none"
+    }
+  },
   footer: {
     borderTop: `1px solid ${theme.palette.divider}`,
     marginTop: theme.spacing(8),

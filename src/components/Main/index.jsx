@@ -42,13 +42,13 @@ export default function MainFeaturedPost(props) {
   return (
     <Paper
       className={classes.mainFeaturedPost}
-      style={{ backgroundImage: `url(${post.image})` }}
+      style={{ backgroundImage: `url(${post.urlToImage})` }}
     >
       {/* Increase the priority of the hero background image */}
       {
         <img
           style={{ display: "none" }}
-          src={post.image}
+          src={post.urlToImage}
           alt={post.imageText}
         />
       }
@@ -68,7 +68,7 @@ export default function MainFeaturedPost(props) {
               {post.description}
             </Typography>
             <Link variant="subtitle1" href="#">
-              {post.linkText}
+              {post.author}
             </Link>
           </div>
         </Grid>

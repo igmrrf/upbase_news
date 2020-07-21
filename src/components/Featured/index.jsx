@@ -21,9 +21,9 @@ const useStyles = makeStyles({
   }
 });
 
-export default function FeaturedPost(props) {
+export default function FeaturedArticle(props) {
   const classes = useStyles();
-  const { post } = props;
+  const { article } = props;
 
   return (
     <Grid item xs={12} md={6}>
@@ -32,13 +32,13 @@ export default function FeaturedPost(props) {
           <div className={classes.cardDetails}>
             <CardContent>
               <Typography component="h2" variant="h5">
-                {post.title}
+                {article.title}
               </Typography>
               <Typography variant="subtitle1" color="textSecondary">
-                {post.date}
+                {article.author}
               </Typography>
               <Typography variant="subtitle1" paragraph>
-                {post.description}
+                {article.description}
               </Typography>
               <Typography variant="subtitle1" color="primary">
                 Continue reading...
@@ -48,8 +48,8 @@ export default function FeaturedPost(props) {
           <Hidden xsDown>
             <CardMedia
               className={classes.cardMedia}
-              image={post.image}
-              title={post.imageTitle}
+              image={article.urlToImage}
+              title={article.source.name}
             />
           </Hidden>
         </Card>
@@ -58,6 +58,6 @@ export default function FeaturedPost(props) {
   );
 }
 
-FeaturedPost.propTypes = {
-  post: PropTypes.object
+FeaturedArticle.propTypes = {
+  article: PropTypes.object
 };
