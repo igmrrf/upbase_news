@@ -12,7 +12,7 @@
 /build
 *.scss
 /style.scss
-.env
+
 
 # misc
 .DS_Store
