@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  font-family: "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.upbase {
+  text-align: center;
+  background-color: #282c34;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.upbase-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.upbase-link {
+  color: #61dafb;
+}
+
+.upbase-form-card {
+  background-color: white;
+  -webkit-box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.4);
+  padding: 20px 30px;
+  min-width: 50vw;
+  max-width: 80vw;
+}
+/*# sourceMappingURL=style.css.map */
