@@ -19,7 +19,7 @@ const News = () => {
   const [mainArticle, setMainArticle] = useState({});
   useEffect(() => {
     API.get(
-      "top-headlines?sources=techcrunch&apiKey=984426ee0ff04a0cb2a8f4fd1661604b"
+      `top-headlines?sources=techcrunch&apiKey=${process.env.REACT_APP_UPBASE_NEWS_KEY}`
     ).then(res => {
       const data = res.data;
       setArticles(data.articles);

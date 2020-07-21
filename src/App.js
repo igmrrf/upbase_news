@@ -10,17 +10,18 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 
 function SignedIn(bool) {
-  return true;
+  return bool;
 }
 
 function App() {
   return (
     <Router>
+      <Header />
       <Switch>
-        {!SignedIn ? (
+        {/* {!SignedIn ? (
           <Switch>
-            <Route exact path="/" component={SignUp} />
-            <Route exact path="/sign_in" component={SignIn} />
+            <Route exact path="/" auth={SignedIn}  component={SignUp} />
+            <Route exact path="/sign_in" auth={SignedIn}  component={SignIn} />
           </Switch>
         ) : (
           <>
@@ -34,9 +35,18 @@ function App() {
             </Switch>
             <Footer />
           </>
-        )}
-        <Route path="" component={NotFound} />
+          )} */}
+
+        <Route exact path="/" component={Home} />
+        <Route exact path="/sign_in" component={SignIn} />
+        <Route exact path="/sign_up" component={SignUp} />
+        <Route exact path="/upload" component={UploadNews} />
+        <Route exact path="/view" component={ReadNews} />
+        <Route exact path="/news/:news" component={ReadNews} />
+        <Route exact path="/category/:category" component={ReadNews} />
+        <Route path="*" component={NotFound} />
       </Switch>
+      <Footer />
     </Router>
   );
 }

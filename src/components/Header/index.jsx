@@ -53,21 +53,16 @@ export default function Header() {
         className={classes.appBar}
       >
         <Toolbar className={classes.toolbar}>
-          <Typography
-            variant="h6"
-            color="inherit"
-            noWrap
+          <Link
+            variant="button"
+            color="textPrimary"
+            href="/"
             className={classes.toolbarTitle}
           >
-            <Link
-              variant="button"
-              color="textPrimary"
-              href="/"
-              className={classes.brand}
-            >
+            <Typography variant="h6" component="h2" color="inherit" noWrap>
               UPBASE NEWS
-            </Link>
-          </Typography>
+            </Typography>
+          </Link>
           <nav>
             <Link
               variant="button"
@@ -75,7 +70,7 @@ export default function Header() {
               href="#"
               className={classes.link}
             >
-              Features
+              Upload
             </Link>
             <Link
               variant="button"
@@ -83,24 +78,24 @@ export default function Header() {
               href="#"
               className={classes.link}
             >
-              Enterprise
-            </Link>
-            <Link
-              variant="button"
-              color="textPrimary"
-              href="#"
-              className={classes.link}
-            >
-              Support
+              View Uploads
             </Link>
           </nav>
           <Button
-            href="#"
+            href="/sign_up"
             color="primary"
             variant="outlined"
             className={classes.link}
           >
-            Login
+            Sign
+          </Button>
+          <Button
+            href="/sign_in"
+            color="primary"
+            variant="outlined"
+            className={classes.link}
+          >
+            Sign Up
           </Button>
         </Toolbar>
       </AppBar>
